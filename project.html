@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html>
-    <body>
-        <h1>math objects in java</h1>
-        <p id = 'p1'></p>
-        <p id = 'p2'></p>
-        <p id = 'p3'></p>
-        <p id = 'p4'></p>
-        <p id = 'p5'></p>
-        <script>
-            var a = 567;
-            var b = 836;
-            document.getElementById('p1').innerHTML = Math.pow(a,b);
-            document.getElementById('p2').innerHTML = Math.sqrt(b);
-            document.getElementById('p3').innerHTML = Math.min(a, b);
-            document.getElementById('p4').innerHTML = Math.max(a, b);
-            document.getElementById('p5').innerHTML = Math.cbrt(a);
-        </script>
-    </body>
+  <body>
+    <h1>Math Object Functions in JavaScript</h1>
+    <p id="sumResult"></p>
+    <p id="powerResult"></p>
+    <p id="squareRootResult"></p>
+    <p id="minimumResult"></p>
+    <p id="maximumResult"></p>
+    <p id="cubeRootResult"></p>
+
+    <script>
+      function sumOfArgs(...args) {
+        return args.reduce((acc, val) => acc + val, 0);
+      }
+
+      var a = 567;
+      var b = 836;
+
+      var total = sumOfArgs(a, b);
+
+      document.getElementById("sumResult").innerHTML = "Sum of arguments: " + total;
+      document.getElementById("powerResult").innerHTML = "a^b: " + Math.pow(a, b);
+      document.getElementById("squareRootResult").innerHTML = "√b: " + Math.sqrt(b);
+      document.getElementById("minimumResult").innerHTML = "Minimum: " + Math.min(a, b);
+      document.getElementById("maximumResult").innerHTML = "Maximum: " + Math.max(a, b);
+      document.getElementById("cubeRootResult").innerHTML = "³√a: " + Math.cbrt(a);
+    </script>
+  </body>
 </html>
